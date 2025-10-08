@@ -30,5 +30,28 @@ This project demonstrates how LLMs and multi-agent systems can be applied to rea
 | **Optional UI** | Streamlit |
 | **Environment** | Jupyter Notebook |
 
+## 🧩 Architecture
+
+The system consists of **three key components** working together in an agentic pipeline:
+
+1. **Resume Parser Agent**  
+   - Extracts text, skills, and experience sections from uploaded resumes.  
+   - Preprocesses and structures data for downstream processing.  
+
+2. **Job Analysis Agent**  
+   - Reads the target job description.  
+   - Extracts role expectations, technical skills, and domain-specific requirements.  
+
+3. **Resume Optimization Agent**  
+   - Compares resume vs. job description.  
+   - Rewrites bullet points, improves phrasing, and adds relevant missing keywords.  
+   - Generates final recommendations with context-aware feedback.  
+
+### 🧠 Multi-Agent Coordination
+
+These agents communicate through **CrewAI’s orchestration layer**, ensuring task delegation and sequential reasoning.  
+LangChain manages the prompt pipelines and context persistence between steps, while GPT-based LLMs handle reasoning and rewriting.
+
+
 
 
